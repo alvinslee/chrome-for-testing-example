@@ -1,0 +1,13 @@
+{
+  "environments": {
+    "test": {
+      "buildpacks": [
+        { "url": "heroku-community/chrome-for-testing" },
+        { "url": "heroku/nodejs" }
+      ],
+      "scripts": {
+        "test": "npm run test:ci"
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
         { "url": "heroku/nodejs" }
       ],
       "scripts": {
-        "test": "npm run test:ci"
+        "test": "pnpm run test"
       }
     }
   }

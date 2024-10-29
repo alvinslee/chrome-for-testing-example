@@ -16,8 +16,8 @@ function App() {
         <Typography variant="h4" gutterBottom>
           Welcome to the Greeting App
         </Typography>
-        <Link href="https://pptr.dev/" rel="noopener">
-          Puppeteer Documentation
+        <Link href="https://playwright.dev/" rel="noopener">
+          Playwright Documentation
         </Link>
         <Box component="form" onSubmit={handleSubmit} mt={3}>
           <TextField

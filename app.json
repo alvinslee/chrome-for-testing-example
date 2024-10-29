@@ -1,12 +1,15 @@
 {
   "environments": {
     "test": {
+      "env": { 
+        "PLAYWRIGHT_BROWSERS_PATH": "/app/.chrome-for-testing"
+      },
       "buildpacks": [
         { "url": "heroku-community/chrome-for-testing" },
         { "url": "heroku/nodejs" }
       ],
       "scripts": {
-        "test": "pnpm run test"
+        "test-setup": "CHROMIUM_PATH=$(pnpm playwright install --dry-run chromium | awk '/Install location/ {print $3}'); mkdir -p \"$CHROMIUM_PATH/chrome-linux\"; ln -s $PLAYWRIGHT_BROWSERS_PATH/chrome-linux64/chrome $CHROMIUM_PATH/chrome-linux/chrome"
       }
     }
   }
